@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DotNet/GoodProgramming/.vs
+/DotNet/GoodProgramming/bin/Debug/net7.0
+/DotNet/GoodProgramming/obj
+/DotNet/GoodProgrammingTests/bin/Debug/net7.0
+/DotNet/GoodProgrammingTests/obj
+/DotNet/Hello/bin/Debug/net7.0
+/DotNet/Hello/obj
