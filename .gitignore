@@ -9,3 +9,5 @@
 /DotNet/GoodProgrammingTests/obj
 /DotNet/Hello/bin/Debug/net7.0
 /DotNet/Hello/obj
+/DotNet/SqlInjection/bin/Debug/net7.0
+/DotNet/SqlInjection/obj
