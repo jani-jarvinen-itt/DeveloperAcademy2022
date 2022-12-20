@@ -11,7 +11,8 @@ function addTable() {
         }
     ];
     // create HTML table from the persons
-    var tableHtml = "<table><thead><tr><th>Number</th>" +
+    var tableHtml = "<table class='table table-striped w-25'>" +
+        "<thead><tr><th>Number</th>" +
         "<th>Name</th><th>Age</th></tr></thead><tbody>";
     for (var index = 0; index < persons.length; index++) {
         var person = persons[index];

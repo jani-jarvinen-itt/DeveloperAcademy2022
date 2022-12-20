@@ -18,7 +18,8 @@ function addTable(): void {
     ];
 
     // create HTML table from the persons
-    let tableHtml: string = "<table><thead><tr><th>Number</th>" +
+    let tableHtml: string = "<table class='table table-striped w-25'>" +
+        "<thead><tr><th>Number</th>" +
         "<th>Name</th><th>Age</th></tr></thead><tbody>";
 
     for (let index: number = 0; index < persons.length; index++) {
