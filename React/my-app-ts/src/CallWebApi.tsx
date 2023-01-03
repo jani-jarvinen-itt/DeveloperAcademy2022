@@ -1,6 +1,20 @@
 import React from 'react';
 
-class CallWebApi extends React.Component {
+interface CallWebApiState {
+    dataFromApiCall: string;
+}
+
+class CallWebApi extends React.Component<any, CallWebApiState> {
+
+    constructor(props: any) {
+        super(props);
+        console.log("CallWebApi.constructor()");
+
+        this.state = { dataFromApiCall: "" };
+
+        // This binding is necessary to make `this` work in the callback
+        this.handleButtonClick = this.handleButtonClick.bind(this);
+    }
 
     handleButtonClick() {
         console.log("Button clicked, it works!");
@@ -11,14 +25,19 @@ class CallWebApi extends React.Component {
             .then(data => {
                 console.log("Express.js API has been called.");
                 console.log(data);
-                // document.getElementById("resultsArea").innerText = data.myproperty;
+
+                this.setState({ dataFromApiCall: data.myproperty });
+                console.log("Updated component state!");
             });
     }
 
     render() {
+        console.log("CallWebApi.render()");
+
         return <div>
             <h1>CallWebApi</h1>
             <button onClick={this.handleButtonClick}>My button</button>
+            <h2>Data from API: {this.state.dataFromApiCall}</h2>
         </div>;
     }
 }
