@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import First from './First';
 import Second from './Second';
+import CallWebApi from './CallWebApi';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <CallWebApi/>
         <First />
         <Second />
         <p>
