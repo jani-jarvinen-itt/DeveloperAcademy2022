@@ -11,3 +11,13 @@
 /DotNet/Hello/obj
 /DotNet/SqlInjection/bin/Debug/net7.0
 /DotNet/SqlInjection/obj
+/.vs
+/DotNet/AspNetHello/.vscode
+/DotNet/AspNetHello/bin/Debug/net7.0
+/DotNet/AspNetHello/obj
+/DotNet/HelloWorld/.vscode
+/DotNet/HelloWorld/bin/Debug/net7.0
+/DotNet/HelloWorld/obj
+/DotNet/ObjectDemo/.vscode
+/DotNet/ObjectDemo/obj
+/DotNet/GoodProgrammingTests/bin/Release/net7.0
