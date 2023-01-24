@@ -1,27 +1,27 @@
 class Car
 {
     // properties
-    string color;
+    public string color;
     int speed;
     bool engineRunning;
 
     // methods
-    void StartEngine()
+    public void StartEngine()
     {
         engineRunning = true;
     }
 
-    void StopEngine()
+    public void StopEngine()
     {
         engineRunning = false;
     }
 
-    void Accelerate()
+    public void Accelerate()
     {
         speed += 10;
     }
 
-    void Decelerate()
+    public void Decelerate()
     {
         speed -= 10;
     }
