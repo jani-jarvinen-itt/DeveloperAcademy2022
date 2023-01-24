@@ -2,8 +2,9 @@ class Car
 {
     // properties
     public string color;
-    int speed;
-    bool engineRunning;
+    public int topSpeed;
+    public int speed;
+    private bool engineRunning;
 
     // methods
     public void StartEngine()
@@ -18,11 +19,29 @@ class Car
 
     public void Accelerate()
     {
+        // if (engineRunning)
+        // {
+        //     speed += 10;
+        // }
+
+        if (!engineRunning)
+        {
+            throw new Exception("Cannot accelerate without the engine running.");
+        }
         speed += 10;
+
+        if (speed > topSpeed) 
+        {
+            speed = topSpeed;
+        }
     }
 
     public void Decelerate()
     {
         speed -= 10;
+        if (speed < 0)
+        {
+            speed = 0;
+        }
     }
 }
