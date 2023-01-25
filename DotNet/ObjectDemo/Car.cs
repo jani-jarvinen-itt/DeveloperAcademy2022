@@ -1,20 +1,20 @@
 class Car
 {
     // properties
-    public string color;
-    public int topSpeed;
-    public int speed;
-    private bool engineRunning;
+    public string Color { get; set; }
+    public int TopSpeed { get; set; }
+    public int Speed { get; private set; }
+    private bool EngineRunning { get; set; }
 
     // methods
     public void StartEngine()
     {
-        engineRunning = true;
+        EngineRunning = true;
     }
 
     public void StopEngine()
     {
-        engineRunning = false;
+        EngineRunning = false;
     }
 
     public void Accelerate()
@@ -24,24 +24,24 @@ class Car
         //     speed += 10;
         // }
 
-        if (!engineRunning)
+        if (!EngineRunning)
         {
             throw new Exception("Cannot accelerate without the engine running.");
         }
-        speed += 10;
+        Speed += 10;
 
-        if (speed > topSpeed) 
+        if (Speed > TopSpeed) 
         {
-            speed = topSpeed;
+            Speed = TopSpeed;
         }
     }
 
     public void Decelerate()
     {
-        speed -= 10;
-        if (speed < 0)
+        Speed -= 10;
+        if (Speed < 0)
         {
-            speed = 0;
+            Speed = 0;
         }
     }
 }
