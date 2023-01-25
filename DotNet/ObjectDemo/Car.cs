@@ -1,4 +1,4 @@
-class Car
+public class Car
 {
     // properties
     public string Color { get; set; }
