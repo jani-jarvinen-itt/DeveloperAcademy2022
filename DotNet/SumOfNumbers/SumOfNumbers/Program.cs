@@ -2,17 +2,17 @@
 string[] lines = File.ReadAllLines(filename);
 
 int sum = 0;
-try
+foreach (string line in lines)
 {
-    foreach (string line in lines)
+    try
     {
         int number = int.Parse(line);
         sum += number;
     }
-}
-catch
-{
-    Console.WriteLine("Error while processing numbers file.");
+    catch
+    {
+        Console.WriteLine($"Error while processing line \"{line}\".");
+    }
 }
 
 Console.WriteLine(sum);
