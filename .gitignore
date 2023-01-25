@@ -21,3 +21,7 @@
 /DotNet/ObjectDemo/.vscode
 /DotNet/ObjectDemo/obj
 /DotNet/GoodProgrammingTests/bin/Release/net7.0
+/DotNet/ObjectDemo/bin/Debug/net7.0
+/DotNet/SumOfNumbers/.vs/SumOfNumbers
+/DotNet/SumOfNumbers/SumOfNumbers/bin/Debug/net7.0
+/DotNet/SumOfNumbers/SumOfNumbers/obj
