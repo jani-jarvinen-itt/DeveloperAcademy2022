@@ -4,6 +4,17 @@ string[] lines = File.ReadAllLines(filename);
 int sum = 0;
 foreach (string line in lines)
 {
+    bool success = int.TryParse(line, out int number);
+    if (success)
+    {
+        sum += number;
+    }
+    else
+    {
+        Console.WriteLine($"Error while processing line \"{line}\".");
+    }
+
+    /*
     try
     {
         int number = int.Parse(line);
@@ -13,6 +24,7 @@ foreach (string line in lines)
     {
         Console.WriteLine($"Error while processing line \"{line}\".");
     }
+    */
 }
 
 Console.WriteLine(sum);
