@@ -18,6 +18,11 @@ namespace AspNetMvcFormSubmit.Controllers
             return View();
         }
 
+        public IActionResult FormDemo()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
