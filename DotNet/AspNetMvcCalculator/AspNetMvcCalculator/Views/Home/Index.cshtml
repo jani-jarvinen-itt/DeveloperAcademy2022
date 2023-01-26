@@ -2,7 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1 class="display-4">Simple Calculator</h1>
+
+<p>Please enter number one:</p>
+<p><input id="num1" type="text" class="form-control w-25" /></p>
+
+<p>Please enter number two:</p>
+<p><input id="num2" type="text" class="form-control w-25" /></p>
+
+<button class="btn btn-primary" onclick="calculateSum()">Calculate sum</button>
