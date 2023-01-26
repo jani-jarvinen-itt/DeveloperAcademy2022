@@ -1,4 +1,5 @@
 ﻿using AspNetMvcUserTable.Models;
+using AspNetMvcUserTable.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -25,7 +26,10 @@ namespace AspNetMvcUserTable.Controllers
 
         public IActionResult UserList()
         {
-            return View();
+            CsvParser parser = new();
+            List<UserDetails> users = parser.ReadUserList();
+
+            return View(users);
         }
 
         public IActionResult Privacy()

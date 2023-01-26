@@ -1,6 +1,12 @@
-﻿@{
+﻿@model List<UserDetails>
+@{
     ViewData["Title"] = "User Listing Page";
 }
 
 <h1 class="display-4">User Listing</h1>
 <p>This is the UserList page.</p>
+
+@foreach (UserDetails user in Model)
+{
+    <p>@user.UserName</p>
+}
