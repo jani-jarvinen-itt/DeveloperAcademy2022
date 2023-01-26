@@ -6,7 +6,25 @@
 <h1 class="display-4">User Listing</h1>
 <p>This is the UserList page.</p>
 
-@foreach (UserDetails user in Model)
-{
-    <p>@user.UserName</p>
-}
+<table>
+    <thead>
+        <tr>
+            <th>User name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (UserDetails user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.UserEmail</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Number of users: @Model.Count</td>
+        </tr>
+    </tfoot>
+</table>
