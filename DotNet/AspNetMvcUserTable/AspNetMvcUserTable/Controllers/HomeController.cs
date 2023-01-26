@@ -18,6 +18,16 @@ namespace AspNetMvcUserTable.Controllers
             return View();
         }
 
+        public string Hello()
+        {
+            return $"Hello World!";
+        }
+
+        public IActionResult UserList()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
