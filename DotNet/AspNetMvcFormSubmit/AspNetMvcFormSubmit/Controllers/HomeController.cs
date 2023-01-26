@@ -26,6 +26,10 @@ namespace AspNetMvcFormSubmit.Controllers
         [HttpPost]
         public IActionResult FormDemo(FormDemoData data)
         {
+            string csvPath = "C:\\DeveloperAcademy\\Code\\DotNet\\Users.csv";
+            string newLine = $"{data.UserName},{data.UserEmail}\r\n";
+            System.IO.File.AppendAllText(csvPath, newLine);
+
             return View("FormDemoThankYou", data);
         }
 
