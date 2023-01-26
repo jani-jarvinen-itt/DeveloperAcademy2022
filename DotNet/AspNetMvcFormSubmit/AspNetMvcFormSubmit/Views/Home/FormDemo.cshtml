@@ -4,10 +4,12 @@
 
 <h1>Form Demo Page</h1>
 
-<p>Please enter user name:</p>
-<p><input id="num1" type="text" class="form-control w-25" /></p>
+<form method="post" action="/Home/FormDemo">
+    <p>Please enter user name:</p>
+    <p><input name="userName" type="text" class="form-control w-25" /></p>
 
-<p>Please enter email address:</p>
-<p><input id="num2" type="text" class="form-control w-25" /></p>
+    <p>Please enter email address:</p>
+    <p><input name="userEmail" type="email" class="form-control w-25" /></p>
 
-<button class="btn btn-primary">Submit data</button>
+    <button class="btn btn-primary" type="submit">Submit data</button>
+</form>
