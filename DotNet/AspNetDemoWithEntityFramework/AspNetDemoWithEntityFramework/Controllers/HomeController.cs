@@ -15,7 +15,10 @@ namespace AspNetDemoWithEntityFramework.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            NorthwindContext context = new();
+            List<Customer> allCustomers = context.Customers.ToList();
+
+            return View(allCustomers);
         }
 
         public IActionResult Privacy()
