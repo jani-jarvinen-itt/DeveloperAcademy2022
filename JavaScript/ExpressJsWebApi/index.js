@@ -1,9 +1,19 @@
 const express = require('express');
+const fs = require('fs');
+const readline = require('readline');
+
+// prepare Express.js and file reading
 const app = express();
 const port = 3000;
+const file = readline.createInterface({
+    input: fs.createReadStream('Customers.csv'),
+    output: process.stdout,
+    terminal: false
+});
 
+// define HTTP GET handler for customer data
 app.get('/api/customers', (req, res) => {
-    res.type("json");
+    /*
     const customerData = [{
         companyName: "Demo Oy",
         contactName: "John Doe",
@@ -13,7 +23,18 @@ app.get('/api/customers', (req, res) => {
         contactName: "Jane Doe",
         country: "Sweden"
     }];
-    res.send(JSON.stringify(customerData));
+    */
+
+    const customerData = [];
+    file.on('line', (line) => {
+        // TODO: add CSV line parsing
+        customerData.push(line);
+    });
+
+    file.on('close', () => {
+        res.type("json");
+        res.send(JSON.stringify(customerData));
+    });
 });
 
 app.listen(port, () => {
