@@ -1,0 +1,3 @@
+﻿Package Manager Console (PMC):
+
+Scaffold-DbContext "Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;Encrypt=no;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
