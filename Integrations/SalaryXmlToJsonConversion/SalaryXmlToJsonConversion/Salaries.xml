@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<palkanlaskenta>
+  <palkka henkilöstöid="1234">
+    <kuukausittain>2500</kuukausittain>
+    <nimi>Jaska Jokunen</nimi>
+  </palkka>
+  <palkka henkilöstöid="2345">
+    <kuukausittain>5000</kuukausittain>
+    <nimi>Erkki Esimies</nimi>
+  </palkka>
+  <palkka henkilöstöid="3456">
+    <kuukausittain>3400</kuukausittain>
+    <nimi>Teppo Testaaja</nimi>
+    <työsuhdealkoi>1.7.2019</työsuhdealkoi>
+  </palkka>
+  <palkka henkilöstöid="4567">
+    <kuukausittain>003200</kuukausittain>
+    <nimi>Niilo Nikkari</nimi>
+  </palkka>
+  <palkka henkilöstöid="4567">
+    <kuukausittain>4100</kuukausittain>
+    <nimi>Maiju Mainio</nimi>
+    <työsuhdealkoi>15.2.2020</työsuhdealkoi>
+  </palkka>
+</palkanlaskenta>

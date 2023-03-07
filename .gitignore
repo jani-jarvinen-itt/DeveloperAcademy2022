@@ -62,3 +62,6 @@
 /DotNet/AspNetWebApiWithEntities/AspNetWebApiWithEntities/AspNetWebApiWithEntities.csproj.user
 /DotNet/AspNetWebApiWithEntities/.vs/ProjectEvaluation
 /JavaScript/ExpressJsWebApi/node_modules
+/Integrations/SalaryXmlToJsonConversion/.vs/SalaryXmlToJsonConversion
+/Integrations/SalaryXmlToJsonConversion/SalaryXmlToJsonConversion/bin/Debug/net7.0
+/Integrations/SalaryXmlToJsonConversion/SalaryXmlToJsonConversion/obj
