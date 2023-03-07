@@ -1,0 +1,16 @@
+[
+  {
+    "personName": "John Doe",
+    "salary": {
+      "monthly": 1234.56
+    },
+    "hireDate": "1.1.2017"
+  },
+  {
+    "personName": "Jane Doe",
+    "salary": {
+      "monthly": 2345.67
+    },
+    "hireDate": ""
+  }
+]

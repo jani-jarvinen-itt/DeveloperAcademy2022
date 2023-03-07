@@ -1,5 +1,6 @@
 ﻿using SalaryXmlToJsonConversion;
 using System.Xml.Linq;
+using System.Text.Json;
 
 Console.WriteLine("Starting salary XML to JSON conversion.");
 
@@ -14,9 +15,34 @@ var employees = xmlDoc.Descendants("palkka") // LINQ to XML
                    HireDate = (string)x.Descendants("työsuhdealkoi").FirstOrDefault() ?? ""
                });
 
-foreach (var employee in employees)
+// step 2, read currency rate from XML file from ECB
+double usdRate = 1.1313;
+
+// step 3, data conversion
+List<EmployeeDestinationFormat> destinationList = new();
+foreach (EmployeeData employee in employees)
 {
     Console.WriteLine($"{employee.Name} -> {employee.MonthlySalaryEuros}.");
+
+    // conversion to destionation format
+    EmployeeDestinationFormat destionation = new()
+    {
+        personName = employee.Name,
+        hireDate = employee.HireDate,
+        salary = new()
+        {
+            monthly = employee.MonthlySalaryEuros * usdRate
+        }
+    };
+    destinationList.Add(destionation);
 }
+
+// step 4, serialize destination data to JSON
+string json = JsonSerializer.Serialize(destinationList,
+    new JsonSerializerOptions() { WriteIndented = true });
+
+Console.WriteLine("---------------");
+Console.WriteLine(json);
+Console.WriteLine("---------------");
 
 Console.WriteLine("Conversion completed.");
