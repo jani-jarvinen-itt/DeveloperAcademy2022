@@ -1,0 +1,18 @@
+<rootElement xmlns="my-namespace-123"
+             xmlns:cns="client-namespace-9876"
+             xmlns:ons="other-namespace-abc">
+    <childElement>
+        Data...
+    </childElement>
+    <childElement>
+        Data...
+        <cns:specialData>12345</cns:specialData>
+        <ons:specialData>ABCDE</ons:specialData>
+    </childElement>
+    <childElement>
+        Data...
+    </childElement>
+    <childElement>
+        Data...
+    </childElement>
+</rootElement>
