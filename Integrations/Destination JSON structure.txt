@@ -1,0 +1,9 @@
+﻿Destination file type: JSON
+
+Structure:
+
+(array)
+	- personName --> value
+	- salary
+		- monthly --> value (in USD)
+	- hireDate
