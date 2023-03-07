@@ -31,6 +31,7 @@ app.get('/api/customers', (req, res) => {
         customerData.push(line);
     });
 
+    // NOTE: this handler won't work because of timing issues
     file.on('close', () => {
         res.type("json");
         res.send(JSON.stringify(customerData));
