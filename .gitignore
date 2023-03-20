@@ -76,3 +76,8 @@
 /Azure/.vs/CosmosGettingStarted
 /Azure/CosmosGettingStartedTutorial/bin/Debug/netcoreapp3.1
 /Azure/CosmosGettingStartedTutorial/obj
+/Azure/BlobStorageDemo/.vs/ProjectEvaluation
+/Azure/CosmosDbNoSqlDemo/.vs/CosmosDbNoSqlDemo
+/Azure/CosmosDbNoSqlDemo/CosmosDbNoSqlDemo/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+/Azure/CosmosDbNoSqlDemo/CosmosDbNoSqlDemo/obj
+/Azure/CosmosDbNoSqlDemo/CosmosDbNoSqlDemo/bin/Debug/net7.0
