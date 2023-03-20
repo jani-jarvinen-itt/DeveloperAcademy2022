@@ -73,3 +73,6 @@
 /Azure/BlobStorageDemo/BlobStorageDemo/bin/Debug/net7.0
 /Azure/BlobStorageDemo/BlobStorageDemo/obj
 /Integrations/NorthwindCustomersToAdventureWorks/.vs/ProjectEvaluation
+/Azure/.vs/CosmosGettingStarted
+/Azure/CosmosGettingStartedTutorial/bin/Debug/netcoreapp3.1
+/Azure/CosmosGettingStartedTutorial/obj
