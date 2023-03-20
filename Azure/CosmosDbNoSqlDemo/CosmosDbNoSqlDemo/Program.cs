@@ -21,6 +21,15 @@ const string ContainerId = "Customers";
 CosmosClient cosmosClient = new(EndpointUri, PrimaryKey);
 Database database = await cosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
 Container container = await database.CreateContainerIfNotExistsAsync(ContainerId, "/id");
+Console.WriteLine("Connection to database is now open.");
 
+// store customer information
+await StoreCustomer(c, container);
 
 Console.WriteLine("Application closing.");
+
+static async Task StoreCustomer(Customer c, Container container)
+{
+    ItemResponse<Customer> response = await container.CreateItemAsync<Customer>(c, new PartitionKey(c.Id));
+    Console.WriteLine($"New customer added to the database, id = {response.Resource.Id}.");
+}
