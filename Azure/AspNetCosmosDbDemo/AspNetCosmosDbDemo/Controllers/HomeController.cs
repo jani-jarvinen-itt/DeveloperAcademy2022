@@ -1,4 +1,5 @@
-﻿using AspNetCosmosDbDemo.Models;
+﻿using AspNetCosmosDbDemo.Database;
+using AspNetCosmosDbDemo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,9 +14,13 @@ namespace AspNetCosmosDbDemo.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            // read the customer from Cosmos DB
+            DatabaseAccess database = new();
+            Customer c = await database.ReadCustomer("1234");
+
+            return View(c);
         }
 
         public IActionResult Privacy()
